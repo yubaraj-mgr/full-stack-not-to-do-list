@@ -20,5 +20,8 @@
     "helmet": "^5.1.0",
     "mongoose": "^6.4.3",
     "nodemon": "^2.0.19"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
