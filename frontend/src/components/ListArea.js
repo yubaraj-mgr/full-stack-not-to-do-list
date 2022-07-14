@@ -7,7 +7,8 @@ const ListArea = ({ taskList, switchTask, total, handleOnCheck, ids }) => {
   // { type } is a destructure
 
   const entryList = taskList.filter(({ type }) => type === "entry");
-
+  console.log(entryList);
+  // const entryList = taskList.filter((item) => item.type == "entry");
   const badList = taskList.filter(({ type }) => type === "bad");
 
   const badHrs = badList.reduce((acc, item) => acc + +item.hr, 0);

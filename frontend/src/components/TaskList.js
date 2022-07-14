@@ -5,6 +5,7 @@ import Button from "react-bootstrap/Button";
 {
   /* annonouses function so that we want to pass the data not call the function */
   // What is the meaning of entryList =[]
+  // [] is there for default value on entryList array because when first rendering we don't have any value and entryList needs either "entry" or "bad".
 }
 const TaskList = ({
   title,
@@ -41,8 +42,8 @@ const TaskList = ({
                   <td>
                     <Form.Check
                       type="checkbox"
-                      value={item.id}
-                      checked={ids.includes(item.id)}
+                      value={item._id}
+                      checked={ids.includes(item._id)}
                       onChange={handleOnCheck}
                     />
                   </td>
@@ -52,14 +53,14 @@ const TaskList = ({
                     {arrow === "right" ? (
                       <Button
                         variant="success"
-                        onClick={() => switchTask(item.id, "bad")}
+                        onClick={() => switchTask(item._id, "bad")}
                       >
                         <i class="fa-solid fa-arrow-right"></i>
                       </Button>
                     ) : (
                       <Button
                         variant="danger"
-                        onClick={() => switchTask(item.id, "entry")}
+                        onClick={() => switchTask(item._id, "entry")}
                       >
                         <i class="fa-solid fa-arrow-left"></i>
                       </Button>
